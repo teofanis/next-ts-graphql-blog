@@ -4,7 +4,9 @@
     "paths": {
       "@pages/*": ["src/pages/*"],
       "@components/*": ["src/components/*"],
-      "@interfaces/*": ["src/interfaces/*"]
+      "@icons/*": ["src/components/Icons/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@services/*": ["src/services/*"]
     },
     "allowJs": true,
     "allowUnreachableCode": false,

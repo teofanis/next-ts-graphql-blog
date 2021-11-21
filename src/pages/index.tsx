@@ -1,12 +1,13 @@
 import type { NextPage } from 'next'
+import { GetStaticProps } from 'next'
 import { Post } from '@interfaces/app.interfaces'
 import { PostCard, Categories, PostWidget } from '@components/index'
+import { getPosts } from '@services/index'
 
-const Home: NextPage = () => {
-  const posts: Post[] = [
-    { title: 'Test with Typescript ', excerpt: 'Playing around :) Cool' },
-    { title: 'Test with Next JS', excerpt: 'Playing around 123' },
-  ]
+interface HomePageProps {
+  posts: Post[]
+}
+const Home: NextPage<HomePageProps> = ({ posts }) => {
   return (
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -24,6 +25,15 @@ const Home: NextPage = () => {
       </div>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts: Post[] = (await getPosts()) || []
+  return {
+    props: {
+      posts,
+    },
+  }
 }
 
 export default Home
