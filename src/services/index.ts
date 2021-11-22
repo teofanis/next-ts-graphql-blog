@@ -37,7 +37,7 @@ export const getPosts = async () => {
 
   const result = await request(graphqlAPI, query)
 
-  return result.postsConnection.edges.map((edge: { node: any }) => edge.node)
+  return result.postsConnection.edges.map((edge: { node: object }) => edge.node)
 }
 
 export const getPost = async (slug: string) => {

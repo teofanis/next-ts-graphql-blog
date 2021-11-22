@@ -5,7 +5,7 @@ interface CommentsProps {
 }
 
 const Comments = ({ slug }: CommentsProps) => {
-  return <div>Comments</div>
+  return <div>Comments : {slug}</div>
 }
 
 export default Comments

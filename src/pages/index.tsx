@@ -1,8 +1,9 @@
+import { Categories, PostCard, PostWidget } from '@components/index'
+import { Post } from '@interfaces/app.interfaces'
+import { getPosts } from '@services/index'
 import type { NextPage } from 'next'
 import { GetStaticProps } from 'next'
-import { Post } from '@interfaces/app.interfaces'
-import { PostCard, Categories, PostWidget } from '@components/index'
-import { getPosts } from '@services/index'
+import React from 'react'
 
 interface HomePageProps {
   posts: Post[]
