@@ -1,9 +1,14 @@
+import { RichTextContent } from '@graphcms/rich-text-types'
+
 export interface Post {
   title: string
   excerpt: string
   slug: string
   categories: Category[]
   author: Author
+  content: {
+    raw: RichTextContent
+  }
   featuredPost: boolean
   featuredImage: {
     url: string

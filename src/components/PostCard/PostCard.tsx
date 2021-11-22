@@ -1,8 +1,9 @@
-import React from 'react'
+import { Date } from '@components/index'
+import { PostedBy } from '@components/Partials'
 import { Post } from '@interfaces/app.interfaces'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Date } from '@components/index'
+import React from 'react'
 
 interface PostCardProps {
   post: Post
@@ -20,20 +21,13 @@ const PostCard = ({ post }: PostCardProps) => {
         />
       </div>
       <h1 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
-        <Link href={`/post/${post.slug}`}>{post.title}</Link>
+        <Link href={`/post/${post.slug}`} passHref>
+          {post.title}
+        </Link>
       </h1>
       <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
         <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
-          <Image
-            src={post.author.photo.url}
-            alt={post.author.name}
-            width={30}
-            height={30}
-            className="align-middle rounded-full"
-          />
-          <p className="inline align-middle text-gray-700 ml-2 text-lg">
-            {post.author.name}
-          </p>
+          <PostedBy author={post.author} />
         </div>
         <div className="font-medium text-gray-700">
           <Date date={post.createdAt} withIcon={true} />
@@ -43,7 +37,7 @@ const PostCard = ({ post }: PostCardProps) => {
         {post.excerpt}
       </p>
       <div className="text-center">
-        <Link href={`/post/${post.slug}`}>
+        <Link href={`/post/${post.slug}`} passHref>
           <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 hover:bg-pink-500 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
             Continue Reading...
           </span>
