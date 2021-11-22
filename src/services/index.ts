@@ -101,7 +101,7 @@ export const getSimilarPosts = async (
   categories?: Category[],
   slug?: string
 ) => {
-  let categorySlugs: String[] =
+  const categorySlugs: String[] =
     categories?.map((category: Category) => category.slug) || []
   const query = gql`
     query getSimilarPosts($slug: String!, $categorySlugs: [String!]) {

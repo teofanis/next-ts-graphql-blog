@@ -7,5 +7,5 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": ["semibold"]
+  "cSpell.words": ["semibold", "tailwindcss"]
 }

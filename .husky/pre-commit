@@ -1,0 +1,50 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '😎 Styling, testing and building before committing'
+
+# Check Prettier standards
+yarn check-format ||
+(
+    echo '🤢🤮🤢🤮 Bad Styling. 🤢🤮🤢🤮
+            Prettier Check Failed. Run yarn format, add changes and try commit again.';
+    false;
+)
+
+# Check ESLint Standards
+yarn check-lint ||
+(
+        echo '😤🏀👋😤 Please fix voltatile code ! 😤🏀👋😤 
+                ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+        false; 
+)
+
+# Check tsconfig standards
+yarn check-types ||
+(
+    echo '🤡😂❌🤡 Failed Type check. 🤡😂❌🤡
+            Typescript Check FAILED. Make sure you make the changes above.'
+    false;
+)
+
+# Now we commit
+echo '🤔🤔🤔🤔... Alright.... Code looks good...Running Final Stage-filed checks and attempting build. 🤔🤔🤔🤔'
+
+
+#Check Staged Files
+yarn lint-staged || (
+
+    echo 'Something went wrong ... Staged file linting Failed. Please fix the above errors !'
+    return false;
+)
+
+yarn build ||
+(
+    echo '❌👷🔨❌ Better call Pan... Because your build failed ❌👷🔨❌
+            Next build failed: View the errors above to see why. 
+    '
+    false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ All checks passed !!! Committing Now. Good Job :) ✅✅✅✅'

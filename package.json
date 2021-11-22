@@ -1,18 +1,28 @@
 {
-  "name": "-t",
+  "name": "graph-blog-ts-next",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test-all": "yarn check-format && yarn check-lint && yarn check-types && yarn build",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
     "graphql": "^16.0.1",
     "graphql-request": "^3.6.1",
     "html-react-parser": "^1.4.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.1",
     "moment": "^2.29.1",
     "next": "12.0.4",
+    "prettier": "^2.4.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-multi-carousel": "^2.6.5",
@@ -23,7 +33,10 @@
     "@types/react": "17.0.35",
     "autoprefixer": "^10.4.0",
     "eslint": "7",
+    "eslint-config-google": "^0.14.0",
     "eslint-config-next": "12.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.26.1",
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.19",
     "typescript": "4.5.2"
