@@ -7,7 +7,7 @@ interface AuthorProps {
 const Author = ({ author }: AuthorProps) => {
   return (
     <div>
-      <h1>Author</h1>
+      <h1>Audsthor</h1>
     </div>
   )
 }
