@@ -99,15 +99,16 @@ export const getRecentPosts = async () => {
 
 export const getSimilarPosts = async (
   categories?: Category[],
-  slug: string
+  slug?: string
 ) => {
-  categories = categories?.map((category: Category) => category.slug)
+  let categorySlugs: String[] =
+    categories?.map((category: Category) => category.slug) || []
   const query = gql`
-    query getSimilarPosts($slug: String!, $categories: [String!]) {
+    query getSimilarPosts($slug: String!, $categorySlugs: [String!]) {
       posts(
         where: {
           slug_not: $slug
-          AND: { categories_some: { slug_in: $categories } }
+          AND: { categories_some: { slug_in: $categorySlugs } }
         }
         last: 3
       ) {
@@ -120,7 +121,7 @@ export const getSimilarPosts = async (
       }
     }
   `
-  const result = await request(graphqlAPI, query, { categories, slug })
+  const result = await request(graphqlAPI, query, { categorySlugs, slug })
 
   return result.posts
 }
