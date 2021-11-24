@@ -40,6 +40,42 @@ export const getPosts = async () => {
   return result.postsConnection.edges.map((edge: { node: object }) => edge.node)
 }
 
+export const getCategoryPost = async (slug: string) => {
+  const query = gql`
+    query getCategoryPost($slug: String!) {
+      postsConnection(where: { categories_some: { slug: $slug } }) {
+        edges {
+          cursor
+          node {
+            author {
+              bio
+              name
+              id
+              photo {
+                url
+              }
+            }
+            createdAt
+            slug
+            title
+            excerpt
+            featuredImage {
+              url
+            }
+            categories {
+              name
+              slug
+            }
+          }
+        }
+      }
+    }
+  `
+  const result = await request(graphqlAPI, query, { slug })
+
+  return result.postsConnection.edges.map((edge: { node: object }) => edge.node)
+}
+
 export const getPost = async (slug: string) => {
   const query = gql`
     query getPost($slug: String!) {
