@@ -28,3 +28,10 @@ export interface Author {
     url: string
   }
 }
+
+export interface Comment {
+  name: string
+  email: string
+  comment: string
+  slug: string
+}
