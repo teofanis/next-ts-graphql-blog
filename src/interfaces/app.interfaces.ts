@@ -34,4 +34,5 @@ export interface Comment {
   email: string
   comment: string
   slug: string
+  createdAt?: Date
 }
