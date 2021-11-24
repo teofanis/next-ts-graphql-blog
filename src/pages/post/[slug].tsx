@@ -1,3 +1,4 @@
+import Loader from '@components/Icons/Loader'
 import {
   Author,
   Categories,
@@ -10,6 +11,7 @@ import { Post } from '@interfaces/app.interfaces'
 import { getPost, getPosts } from '@services/index'
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/server/router'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 interface PostPageProps {
@@ -17,6 +19,10 @@ interface PostPageProps {
 }
 
 const PostPage: NextPage<PostPageProps> = ({ post }) => {
+  const router = useRouter()
+  if (router.isFallback) {
+    return <Loader />
+  }
   return (
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -57,7 +63,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   })
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
