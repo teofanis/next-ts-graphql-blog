@@ -7,6 +7,7 @@
       "@icons/*": ["src/components/Icons/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@services/*": ["src/services/*"],
+      "@sections/*": ["src/sections/*"],
       "@hooks/*": ["src/hooks/*"]
     },
     "allowJs": true,
