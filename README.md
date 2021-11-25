@@ -17,15 +17,11 @@ Also planning to include cypress e2e tests.
 Clone the repo and run the following commands at the root of the project:
 Copy the .env.example file to .env and replace the XXXXX values.
 
-    ```bash
-        yarn install
-        yarn dev
-        yarn prepare // Installs the pre-commit hooks
-    ```
-
-## [TO DO]
-
-    -DB schema
+```bash
+    yarn install
+    yarn dev
+    yarn prepare // Installs the pre-commit hooks
+```
 
 ## Linting
 
@@ -44,8 +40,8 @@ This project is using husky to prevent issues while we're trying to push/commit 
     - Code Style Standards
     - Linting Standards
     - Typescript Standards
-    - Staged File Checks (-all of the above)
     - Successful build test
+    - Staged File Checks (-all of the above)
 
 ## Commands
 

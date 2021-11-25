@@ -14,9 +14,9 @@ yarn check-format ||
 # Check ESLint Standards
 yarn check-lint ||
 (
-        echo '😤🏀👋😤 Please fix voltatile code ! 😤🏀👋😤 
+        echo '😤🏀👋😤 Please fix voltatile code ! 😤🏀👋😤
                 ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false; 
+        false;
 )
 
 # Check tsconfig standards
@@ -41,7 +41,7 @@ yarn lint-staged || (
 yarn build ||
 (
     echo '❌👷🔨❌ Better call Pan... Because your build failed ❌👷🔨❌
-            Next build failed: View the errors above to see why. 
+            Next build failed: View the errors above to see why.
     '
     false;
 )
