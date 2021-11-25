@@ -6,7 +6,9 @@
       "@components/*": ["src/components/*"],
       "@icons/*": ["src/components/Icons/*"],
       "@interfaces/*": ["src/interfaces/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+      "@sections/*": ["src/sections/*"],
+      "@hooks/*": ["src/hooks/*"]
     },
     "allowJs": true,
     "allowUnreachableCode": false,

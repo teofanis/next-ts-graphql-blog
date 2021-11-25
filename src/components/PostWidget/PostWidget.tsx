@@ -21,7 +21,7 @@ const PostWidget = ({ categories, slug }: PostWidgetProps) => {
     } else {
       getRecentPosts().then((result) => setRelatedPosts(result))
     }
-  }, [slug])
+  }, [categories, slug])
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
@@ -43,7 +43,7 @@ const PostWidget = ({ categories, slug }: PostWidgetProps) => {
             <p className="text-gray-500 font-xs">
               <Date date={post.createdAt} />
             </p>
-            <Link href={`/post/${post.slug}`}>
+            <Link href={`/post/${post.slug}`} passHref>
               <span className="text-md cursor-pointer hover:underline">
                 {post.title}
               </span>

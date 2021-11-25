@@ -1,24 +1,17 @@
 import Loader from '@components/Icons/Loader'
-import {
-  Author,
-  Categories,
-  Comments,
-  CommentsForm,
-  PostDetail,
-  PostWidget,
-} from '@components/index'
-import { Post } from '@interfaces/app.interfaces'
-import { getPost, getPosts } from '@services/index'
-import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { Categories, PostCard } from '@components/index'
+import { Category, Post } from '@interfaces/app.interfaces'
+import { getCategories, getCategoryPost } from '@services/index'
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/server/router'
 import { useRouter } from 'next/router'
 import React from 'react'
 
-interface PostPageProps {
-  post: Post
+interface CategoryPostsProps {
+  posts: Post[]
 }
 
-const PostPage: NextPage<PostPageProps> = ({ post }) => {
+const CategoryPosts: NextPage<CategoryPostsProps> = ({ posts }) => {
   const router = useRouter()
   if (router.isFallback) {
     return <Loader />
@@ -27,14 +20,12 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
-          <PostDetail post={post} />
-          <Author author={post.author} />
-          <Comments slug={post.slug} />
-          <CommentsForm slug={post.slug} />
+          {posts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
-            <PostWidget slug={post.slug} categories={post.categories} />
             <Categories />
           </div>
         </div>
@@ -43,21 +34,23 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
   )
 }
 
+export default CategoryPosts
+
 export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
-  const post: Post = await getPost(params.slug)
+  const posts: Post[] = await getCategoryPost(params.slug)
   return {
     props: {
-      post,
+      posts,
     },
   }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts: Post[] = await getPosts()
-  const paths = posts.map((post) => {
+  const categories: Category[] = await getCategories()
+  const paths = categories.map((category) => {
     return {
       params: {
-        slug: post.slug,
+        slug: category.slug,
       },
     }
   })
@@ -66,5 +59,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: true,
   }
 }
-
-export default PostPage

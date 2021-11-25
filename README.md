@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS / React / Typescript / Tailwind / GraphQL / GraphCMS
 
-## Getting Started
+## Description
 
-First, run the development server:
+This project has been build for the purpose of learning and practicing the following technologies:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+    - Typescript
+    - Next JS / React
+    - GraphQL
+    - GraphCMS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Will also setup some basic tools for CI/CD.
+Also planning to include cypress e2e tests.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Clone the repo and run the following commands at the root of the project:
+Copy the .env.example file to .env and replace the XXXXX values.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+    ```bash
+        yarn install
+        yarn dev
+        yarn prepare // Installs the pre-commit hooks
+    ```
 
-## Learn More
+## [TO DO]
 
-To learn more about Next.js, take a look at the following resources:
+    -DB schema
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Linting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project uses [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) in Google Style config to perform static checks on all the code.
 
-## Deploy on Vercel
+## TypeScript
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project uses [TypeScript](https://www.typescriptlang.org/) to simplify JavaScript allowing to be read and to debug easier.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Husky
+
+This project is using husky to prevent issues while we're trying to push/commit our code to remote.
+
+### Husky Checks
+
+    - Code Style Standards
+    - Linting Standards
+    - Typescript Standards
+    - Staged File Checks (-all of the above)
+    - Successful build test
+
+## Commands
+
+- `yarn dev`: Starts the project in development mode
+- `yarn build`: Builds the project for production
+- `yarn start` : Starts the production server
+- `yarn check-types` : Checks for typescript errors
+- `yarn check-format` : Checks for code style errors
+- `yarn check-lint` : Checks for linting errors
+- `yarn format` : Runs format on all files
+- `yarn test-all` : Runs all pre-commit checks
+- `yarn prepare` : Installs pre-commit husky hooks
