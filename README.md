@@ -17,15 +17,12 @@ Also planning to include cypress e2e tests.
 Clone the repo and run the following commands at the root of the project:
 Copy the .env.example file to .env and replace the XXXXX values.
 
-    ```bash
+    ```
         yarn install
         yarn dev
         yarn prepare // Installs the pre-commit hooks
     ```
 
-## [TO DO]
-
-    -DB schema
 
 ## Linting
 
