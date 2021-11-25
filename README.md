@@ -44,8 +44,8 @@ This project is using husky to prevent issues while we're trying to push/commit 
     - Code Style Standards
     - Linting Standards
     - Typescript Standards
-    - Staged File Checks (-all of the above)
     - Successful build test
+    - Staged File Checks (-all of the above)
 
 ## Commands
 
