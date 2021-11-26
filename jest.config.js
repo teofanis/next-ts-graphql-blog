@@ -23,10 +23,14 @@ module.exports = {
     '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$':
       '<rootDir>/__mocks__/fileMock.js',
   },
+  collectCoverage: true,
+  coverageReporters: ['json', 'html', 'lcov'],
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
+    '!**/.next/**',
+    '!**/out/**',
   ],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   transform: {

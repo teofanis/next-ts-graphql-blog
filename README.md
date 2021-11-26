@@ -53,5 +53,6 @@ This project is using husky to prevent issues while we're trying to push/commit 
 - `yarn check-lint` : Checks for linting errors
 - `yarn format` : Runs format on all files
 - `yarn test` : Runs test suites
-- `yarn test-all` : Runs all pre-commit checks
+- `yarn test:coverage` : Runs test suites with coverage report generation
+- `yarn test-all` : Runs all pre-push checks (format, types, lint, test, prod-build)
 - `yarn prepare` : Installs pre-commit husky hooks

@@ -7,5 +7,12 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": ["graphcms", "semibold", "tailwindcss", "testid"]
+  "cSpell.words": [
+    "coverallsapp",
+    "graphcms",
+    "lcov",
+    "semibold",
+    "tailwindcss",
+    "testid"
+  ]
 }

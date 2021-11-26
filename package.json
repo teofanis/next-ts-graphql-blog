@@ -10,6 +10,7 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test-all": "yarn check-format && yarn check-lint && yarn check-types && yarn test && yarn build",
     "prepare": "husky install"
   },
