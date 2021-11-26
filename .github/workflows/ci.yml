@@ -1,7 +1,4 @@
 name: CI
-env:
-  NEXT_PUBLIC_GRAPH_CMS_ENDPOINT: '${{ secrets.NEXT_PUBLIC_GRAPH_CMS_ENDPOINT}}'
-  NEXT_PUBLIC_GRAPH_CMS_TOKEN: '${{ secrets.NEXT_PUBLIC_GRAPH_CMS_TOKEN}}'
 on: [pull_request]
 jobs:
   test_and_lint:
@@ -14,5 +11,3 @@ jobs:
         run: yarn lint
       - name: Run unit tests
         run: yarn test
-      - name: Run build test
-        run: yarn build
