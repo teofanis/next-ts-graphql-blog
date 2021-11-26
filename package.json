@@ -9,6 +9,7 @@
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
+    "lint": "yarn check-types && yarn check-format && yarn check-lint",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test-all": "yarn check-format && yarn check-lint && yarn check-types && yarn test && yarn build",

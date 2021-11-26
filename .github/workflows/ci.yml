@@ -8,6 +8,6 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Run all linting tests
-        run: yarn test-all
+        run: yarn lint
       - name: Run unit tests
         run: yarn test
