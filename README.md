@@ -1,5 +1,9 @@
 # NextJS / React / Typescript / Tailwind / GraphQL / GraphCMS
 
+## Badges
+
+[![CI](https://github.com/teofanis/next-ts-graphql-blog/actions/workflows/ci.yml/badge.svg)](https://github.com/teofanis/next-ts-graphql-blog/actions/workflows/ci.yml)
+
 ## Description
 
 This project has been build for the purpose of learning and practicing the following technologies:
