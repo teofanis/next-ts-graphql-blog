@@ -14,8 +14,22 @@ jobs:
       - name: Install dependencies and report test coverage
         run: |
           yarn
-          yarn test:coverage --coverageReporters lcov
-      - name: Send badge to Coveralls
-        uses: coverallsapp/github-action@v1.1.2
+          SUMMARY="SUMMARY="$(yarn test:coverage --coverageReporters='text-summary' | tail -3 | head -1 | cut -c15-)"
+          TOKENS=($SUMMARY)
+          echo "COVERAGE=$(echo ${TOKENS})" >> $GITHUB_ENV
+          REF=${{ github.ref }}
+          echo "github.ref: $REF"
+          IFS='/' read -ra PATHS <<< "$REF"
+          BRANCH_NAME="${PATHS[1]}_${PATHS[2]}"
+          echo $BRANCH_NAME
+          echo "BRANCH=$(echo ${BRANCH_NAME})" >> $GITHUB_ENV
+      - name: Create the Badge
+        uses: schneegans/dynamic-badges-action@v1.0.0
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 5734448c5f2e10915c1d4e45ad04dd25
+          filename: next-ts-graphql-blog__${{ env.BRANCH }}.json
+          label: Test Coverage
+          message: ${{ env.COVERAGE }}
+          color: green
+          namedLogo: jest
