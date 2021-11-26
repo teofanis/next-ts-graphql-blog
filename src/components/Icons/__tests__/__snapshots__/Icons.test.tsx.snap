@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icons Tests Arrow Icon tests renders correctly 1`] = `
+<div>
+  <svg
+    class="h-6 w-6 text-white w-full"
+    data-testid="left-arrow-svg"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 19l-7-7m0 0l7-7m-7 7h18"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Icons Tests Calendar Icon Tests renders correctly 1`] = `
+<div>
+  <svg
+    class="h-6 w-6 inline mr-2 text-pink-500"
+    data-testid="calendar-icon"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Icons Tests Loader Icon Tests renders correctly 1`] = `
+<div>
+  <div
+    class="text-center"
+    data-testid="loader-svg"
+  >
+    <button
+      class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-rose-600 hover:bg-rose-500 focus:border-rose-700 active:bg-rose-700 transition ease-in-out duration-150 cursor-not-allowed"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          class="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          stroke-width="4"
+        />
+        <path
+          class="opacity-75"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          fill="currentColor"
+        />
+      </svg>
+      Loading
+    </button>
+  </div>
+</div>
+`;

@@ -7,6 +7,7 @@ interface ArrowsProps {
 const Arrows = ({ direction }: ArrowsProps) => {
   const leftArrowSVG = (
     <svg
+      data-testid="left-arrow-svg"
       xmlns="http://www.w3.org/2000/svg"
       className="h-6 w-6 text-white w-full"
       fill="none"
@@ -24,6 +25,7 @@ const Arrows = ({ direction }: ArrowsProps) => {
 
   const rightArrowSVG = (
     <svg
+      data-testid="right-arrow-svg"
       xmlns="http://www.w3.org/2000/svg"
       className="h-6 w-6 text-white w-full"
       fill="none"
