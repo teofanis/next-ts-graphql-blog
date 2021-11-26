@@ -1,21 +1,21 @@
-name: Test Coverage
+name: Test_Coverage
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 jobs:
   run_tc:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies and run test coverage
+      - name: Install dependencies and report test coverage
         run: |
           yarn
           yarn test:coverage --coverageReporters lcov
       - name: Send badge to Coveralls
         uses: coverallsapp/github-action@v1.1.2
-  with:
-    github-token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
