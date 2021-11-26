@@ -40,7 +40,7 @@ yarn lint-staged || (
 
 yarn build ||
 (
-    echo '❌👷🔨❌ Better call Pan... Because your build failed ❌👷🔨❌
+    echo '❌👷🔨❌ Build failed ❌👷🔨❌
             Next build failed: View the errors above to see why.
     '
     false;

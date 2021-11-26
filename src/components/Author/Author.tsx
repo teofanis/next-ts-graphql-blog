@@ -1,9 +1,9 @@
-import { Author } from '@interfaces/app.interfaces'
+import { Author as AuthorInterface } from '@interfaces/app.interfaces'
 import Image from 'next/image'
 import React from 'react'
 
 interface AuthorProps {
-  author: Author
+  author: AuthorInterface
 }
 const Author = ({ author }: AuthorProps) => {
   return (
