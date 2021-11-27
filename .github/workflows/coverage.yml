@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  run test-coverage-workflow:
+  run tests_coverage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
