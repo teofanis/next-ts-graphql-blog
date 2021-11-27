@@ -1,0 +1,17 @@
+name: Compressed Size
+env:
+  NEXT_PUBLIC_GRAPH_CMS_ENDPOINT: '${{ secrets.NEXT_PUBLIC_GRAPH_CMS_ENDPOINT}}'
+  NEXT_PUBLIC_GRAPH_CMS_TOKEN: '${{ secrets.NEXT_PUBLIC_GRAPH_CMS_TOKEN}}'
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: preactjs/compressed-size-action@v2
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          pattern: './.next/static/**/*.js'
+          strip-hash: "(?:runtime/\\w+-(\\w{20}).js$|chunks/\\w{40}\\.(\\w{20})\\.js$|static/(\\w{20,21})/)"
+          use-check: true
+          build-script: 'build'

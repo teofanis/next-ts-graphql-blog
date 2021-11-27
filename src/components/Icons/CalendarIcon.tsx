@@ -3,6 +3,7 @@ import React from 'react'
 const CalendarIcon = () => {
   return (
     <svg
+      data-testid="calendar-icon"
       xmlns="http://www.w3.org/2000/svg"
       className="h-6 w-6 inline mr-2 text-pink-500"
       fill="none"

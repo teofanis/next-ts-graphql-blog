@@ -8,7 +8,8 @@
       "@interfaces/*": ["src/interfaces/*"],
       "@services/*": ["src/services/*"],
       "@sections/*": ["src/sections/*"],
-      "@hooks/*": ["src/hooks/*"]
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "allowJs": true,
     "allowUnreachableCode": false,
@@ -32,6 +33,6 @@
     "target": "es2018",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
   "exclude": ["node_modules"]
 }

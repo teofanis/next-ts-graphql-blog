@@ -1,5 +1,8 @@
 # NextJS / React / Typescript / Tailwind / GraphQL / GraphCMS
 
+[![CI](https://github.com/teofanis/next-ts-graphql-blog/actions/workflows/ci.yml/badge.svg)](https://github.com/teofanis/next-ts-graphql-blog/actions/workflows/ci.yml)
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teofanis/5734448c5f2e10915c1d4e45ad04dd25/raw/next-ts-graphql-blog_test_coverage.json)
+
 ## Description
 
 This project has been build for the purpose of learning and practicing the following technologies:
@@ -17,12 +20,11 @@ Also planning to include cypress e2e tests.
 Clone the repo and run the following commands at the root of the project:
 Copy the .env.example file to .env and replace the XXXXX values.
 
-    ```
-        yarn install
-        yarn dev
-        yarn prepare // Installs the pre-commit hooks
-    ```
-
+```bash
+    yarn install
+    yarn dev
+    yarn prepare // Installs the pre-commit hooks
+```
 
 ## Linting
 
@@ -53,5 +55,8 @@ This project is using husky to prevent issues while we're trying to push/commit 
 - `yarn check-format` : Checks for code style errors
 - `yarn check-lint` : Checks for linting errors
 - `yarn format` : Runs format on all files
-- `yarn test-all` : Runs all pre-commit checks
+- `yarn lint` : Runs check-types, check-format and check-lint
+- `yarn test` : Runs test suites
+- `yarn test:coverage` : Runs test suites with coverage report generation
+- `yarn test-all` : Runs all pre-push checks (format, types, lint, test, prod-build)
 - `yarn prepare` : Installs pre-commit husky hooks

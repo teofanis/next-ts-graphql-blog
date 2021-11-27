@@ -1,0 +1,31 @@
+name: Test_Coverage
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  run-test-coverage-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn
+      - name: Run tests with coverage
+        run: |
+          SUMMARY="$(yarn test --coverage --coverageReporters=text-summary | tail -3 | head -1)"
+          TOKENS=($SUMMARY)
+          echo "COVERAGE=$(echo ${TOKENS[2]})" >> $GITHUB_ENV
+      - name: Create the Coverage Badge
+        uses: schneegans/dynamic-badges-action@v1.1.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 5734448c5f2e10915c1d4e45ad04dd25
+          filename: next-ts-graphql-blog_test_coverage.json
+          label: Test Coverage
+          message: ${{ env.COVERAGE }}
+          namedLogo: jest
+          color: blue
+          logoColor: lightblue

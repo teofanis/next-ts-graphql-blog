@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '😎 Running all checks'
+
+yarn test-all ||
+(
+    echo '❌Checks failed. Please fix above errors and try again ❌'
+    false;
+)
