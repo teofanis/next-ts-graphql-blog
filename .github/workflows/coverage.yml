@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies and report test coverage
         run: |
           yarn
-          SUMMARY="SUMMARY="$(yarn test:coverage --coverageReporters='text-summary' | tail -3 | head -1 | cut -c15-)"
+          SUMMARY="SUMMARY=$(yarn test:coverage --coverageReporters='text-summary' | tail -3 | head -1 | cut -c15-)"
           TOKENS=($SUMMARY)
           echo "COVERAGE=$(echo ${TOKENS})" >> $GITHUB_ENV
           REF=${{ github.ref }}
