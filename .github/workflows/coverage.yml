@@ -7,29 +7,25 @@ on:
     branches:
       - main
 jobs:
-  run_tc:
+  run test-coverage-workflow:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies and report test coverage
+      - name: Install dependencies
+        run: yarn
+      - name: Run tests with coverage
         run: |
-          yarn
-          SUMMARY="SUMMARY=$(yarn test:coverage --coverageReporters='text-summary' | tail -3 | head -1 | cut -c15-)"
+          SUMMARY="$(yarn test --coverage --coverageReporters=text-summary | tail -3 | head -1)"
           TOKENS=($SUMMARY)
-          echo "COVERAGE=$(echo ${TOKENS})" >> $GITHUB_ENV
-          REF=${{ github.ref }}
-          echo "github.ref: $REF"
-          IFS='/' read -ra PATHS <<< "$REF"
-          BRANCH_NAME="${PATHS[1]}_${PATHS[2]}"
-          echo $BRANCH_NAME
-          echo "BRANCH=$(echo ${BRANCH_NAME})" >> $GITHUB_ENV
-      - name: Create the Badge
-        uses: schneegans/dynamic-badges-action@v1.0.0
+          echo "COVERAGE=$(echo ${TOKENS[2]})" >> $GITHUB_ENV
+      - name: Create the Coverage Badge
+        uses: schneegans/dynamic-badges-action@v1.1.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: 5734448c5f2e10915c1d4e45ad04dd25
-          filename: next-ts-graphql-blog__${{ env.BRANCH }}.json
+          filename: next-ts-graphql-blog_test_coverage.json
           label: Test Coverage
           message: ${{ env.COVERAGE }}
-          color: green
           namedLogo: jest
+          color: blue
+          logoColor: lightblue
