@@ -1,6 +1,7 @@
 # NextJS / React / Typescript / Tailwind / GraphQL / GraphCMS
 
 [![CI](https://github.com/teofanis/next-ts-graphql-blog/actions/workflows/ci.yml/badge.svg)](https://github.com/teofanis/next-ts-graphql-blog/actions/workflows/ci.yml)
+![Production](https://img.shields.io/github/deployments/teofanis/next-ts-graphql-blog/production?label=production&logo=vercel&logoColor=white)
 ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teofanis/5734448c5f2e10915c1d4e45ad04dd25/raw/next-ts-graphql-blog_test_coverage.json)
 
 ## Description
