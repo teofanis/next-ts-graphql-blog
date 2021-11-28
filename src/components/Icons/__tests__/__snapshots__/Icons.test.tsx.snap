@@ -23,7 +23,7 @@ exports[`Icons Tests Arrow Icon tests renders correctly 1`] = `
 exports[`Icons Tests Calendar Icon Tests renders correctly 1`] = `
 <div>
   <svg
-    class="h-6 w-6 inline mr-2 text-pink-500"
+    class="h-6 w-6 inline mr-2 text-pink-500 dark:text-yellow-500"
     data-testid="calendar-icon"
     fill="none"
     stroke="currentColor"

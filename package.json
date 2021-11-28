@@ -18,6 +18,7 @@
   "dependencies": {
     "@graphcms/rich-text-react-renderer": "^0.3.2",
     "@graphcms/rich-text-types": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.1",
     "@types/jest": "^27.0.3",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
@@ -28,6 +29,7 @@
     "lint-staged": "^12.1.1",
     "moment": "^2.29.1",
     "next": "12.0.4",
+    "next-themes": "^0.0.15",
     "prettier": "^2.4.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",

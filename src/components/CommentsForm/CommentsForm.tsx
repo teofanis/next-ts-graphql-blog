@@ -96,7 +96,7 @@ const CommentsForm = ({ slug }: CommentsFormProps) => {
   }
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
+    <div className="bg-white dark:bg-gray-500 shadow-lg rounded-lg p-8 pb-12 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">
         Leave a Comment
       </h3>
@@ -138,7 +138,7 @@ const CommentsForm = ({ slug }: CommentsFormProps) => {
             value="true"
           />
           <label
-            className="text-gray-500 cursor-pointer text-sm ml-2"
+            className="dark:text-white text-gray-500 cursor-pointer text-sm ml-2"
             htmlFor="storeData"
           >
             Save my e-email and name for the next time I comment.
@@ -150,7 +150,7 @@ const CommentsForm = ({ slug }: CommentsFormProps) => {
         <button
           type="button"
           onClick={handleCommentSubmission}
-          className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 cursor:pointer"
+          className="transition duration-500 ease dark:hover:bg-yellow-600 dark:bg-yellow-500 hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 cursor:pointer"
         >
           Post Comment
         </button>
