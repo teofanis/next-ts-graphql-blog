@@ -16,7 +16,7 @@ export const PostedBy = ({ author }: PostedByProps) => {
         height={30}
         className="align-middle rounded-full"
       />
-      <p className="inline align-middle text-gray-700 ml-2 text-lg">
+      <p className="inline align-middle dark:text-white text-gray-700 ml-2 text-lg">
         {author.name}
       </p>
     </div>

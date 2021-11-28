@@ -16,7 +16,7 @@ const Comments = ({ slug }: CommentsProps) => {
   return (
     <>
       {comments.length > 0 && (
-        <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
+        <div className="bg-white dark:bg-gray-500 shadow-lg rounded-lg p-8 pb-12 mb-8">
           <h3 className="text-xl mb-8 font-semibold border-b pb-4">
             {comments.length} Comments
           </h3>
@@ -26,7 +26,7 @@ const Comments = ({ slug }: CommentsProps) => {
                 <span className="font-semibold">{comment.name}</span> on{' '}
                 <Date date={comment.createdAt || ''} />
               </p>
-              <p className="whitespace-pre-line text-gray-600 w-full">
+              <p className="whitespace-pre-line dark:text-white text-gray-600 w-full">
                 {parse(comment.comment)}
               </p>
             </div>
