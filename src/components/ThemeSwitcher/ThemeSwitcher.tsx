@@ -1,10 +1,13 @@
 import { useTheme } from 'next-themes'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ThemeSwitcher = () => {
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
-  return (
+  useEffect(() => setMounted(true), [])
+
+  return !mounted ? null : (
     <button
       aria-label="Toggle Dark Mode"
       type="button"
