@@ -179,7 +179,6 @@ export const getFeaturedPosts = async () => {
       }
     }
    `
-
   const result = await graphclient.request(query)
   return result.posts
 }
