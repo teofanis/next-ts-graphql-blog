@@ -9,9 +9,10 @@ import React from 'react'
 
 interface CategoryPostsProps {
   posts: Post[]
+  categories: Category[]
 }
 
-const CategoryPosts: NextPage<CategoryPostsProps> = ({ posts }) => {
+const CategoryPosts: NextPage<CategoryPostsProps> = ({ posts, categories }) => {
   const router = useRouter()
   if (router.isFallback) {
     return <Loader />
@@ -26,7 +27,7 @@ const CategoryPosts: NextPage<CategoryPostsProps> = ({ posts }) => {
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
-            <Categories />
+            <Categories categories={categories} />
           </div>
         </div>
       </div>
@@ -38,9 +39,12 @@ export default CategoryPosts
 
 export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
   const posts: Post[] = await getCategoryPost(params.slug)
+  const categories: Category[] = await getCategories()
+
   return {
     props: {
       posts,
+      categories,
     },
   }
 }

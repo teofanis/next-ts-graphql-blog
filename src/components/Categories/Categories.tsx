@@ -7,7 +7,7 @@ interface CategoryProps {
   categories: Category[]
 }
 const Categories: React.FC<CategoryProps> = ({ categories }) => {
-  const { data } = useSWR<CategoryProps>(['api/categories', 'categories'], {
+  const { data } = useSWR<CategoryProps>(['api/categories', categories], {
     fallbackData: { categories: categories },
   })
 

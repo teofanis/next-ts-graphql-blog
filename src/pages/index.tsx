@@ -21,7 +21,7 @@ const Home: NextPage<HomePageProps> = ({ posts, categories }) => {
         </div>
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
-            <PostWidget />
+            <PostWidget posts={posts.slice(0, 3)} />
             <Categories categories={categories} />
           </div>
         </div>
@@ -40,6 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
       }
     })
   })
+
   return {
     props: {
       posts,
