@@ -1,7 +1,5 @@
 import { Category, Comment } from '@interfaces/app.interfaces'
-import { gql, request } from 'graphql-request'
-
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPH_CMS_ENDPOINT || ''
+import graphclient, { gql } from '@services/graphclient'
 
 export const getPosts = async () => {
   const query = gql`
@@ -35,7 +33,7 @@ export const getPosts = async () => {
     }
   `
 
-  const result = await request(graphqlAPI, query)
+  const result = await graphclient.request(query)
 
   return result.postsConnection.edges.map((edge: { node: object }) => edge.node)
 }
@@ -71,7 +69,7 @@ export const getCategoryPost = async (slug: string) => {
       }
     }
   `
-  const result = await request(graphqlAPI, query, { slug })
+  const result = await graphclient.request(query, { slug })
 
   return result.postsConnection.edges.map((edge: { node: object }) => edge.node)
 }
@@ -107,7 +105,7 @@ export const getPost = async (slug: string) => {
     }
   `
 
-  const result = await request(graphqlAPI, query, { slug })
+  const result = await graphclient.request(query, { slug })
 
   return result.post
 }
@@ -128,7 +126,7 @@ export const getRecentPosts = async () => {
       }
     }
   `
-  const result = await request(graphqlAPI, query)
+  const result = await graphclient.request(query)
 
   return result.posts
 }
@@ -157,7 +155,7 @@ export const getSimilarPosts = async (
       }
     }
   `
-  const result = await request(graphqlAPI, query, { categorySlugs, slug })
+  const result = await graphclient.request(query, { categorySlugs, slug })
 
   return result.posts
 }
@@ -182,7 +180,7 @@ export const getFeaturedPosts = async () => {
     }
    `
 
-  const result = await request(graphqlAPI, query)
+  const result = await graphclient.request(query)
   return result.posts
 }
 
@@ -195,7 +193,7 @@ export const getCategories = async () => {
       }
     }
   `
-  const result = await request(graphqlAPI, query)
+  const result = await graphclient.request(query)
   return result.categories
 }
 
@@ -209,7 +207,7 @@ export const getComments = async (slug: string) => {
       }
     }
   `
-  const result = await request(graphqlAPI, query, { slug })
+  const result = await graphclient.request(query, { slug })
   return result.comments
 }
 
