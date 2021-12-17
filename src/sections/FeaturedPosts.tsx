@@ -1,7 +1,6 @@
 import { FeaturedPostCard } from '@components/index'
 import Arrows from '@icons/Arrows'
 import { Post } from '@interfaces/app.interfaces'
-import graphclient from '@services/graphclient'
 import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
@@ -32,24 +31,7 @@ interface FeaturedPostProps {
 
 export const FeaturedPosts: React.FC<FeaturedPostProps> = ({ posts }) => {
   const { data } = useSWR<FeaturedPostProps>(
-    `query getFeaturedPosts() {
-      posts(where: { featuredPost: true }) {
-        author {
-          name
-          photo {
-            url
-          }
-        }
-        featuredImage {
-          url
-        }
-        title
-        slug
-        createdAt
-      }
-    }
-  `,
-    (query) => graphclient.request(query),
+    ['api/featured-posts', 'featuredPosts'],
     { fallbackData: { posts: posts } }
   )
 
