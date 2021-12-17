@@ -36,6 +36,7 @@
     "react-multi-carousel": "^2.6.5",
     "sass": "^1.43.4",
     "sharp": "^0.29.3",
+    "swr": "^1.1.2-beta.0",
     "ts-jest": "^27.0.7"
   },
   "devDependencies": {

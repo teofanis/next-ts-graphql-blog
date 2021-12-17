@@ -7,8 +7,13 @@ import {
   PostDetail,
   PostWidget,
 } from '@components/index'
-import { Post } from '@interfaces/app.interfaces'
-import { getPost, getPosts } from '@services/index'
+import { Category, Post } from '@interfaces/app.interfaces'
+import {
+  getCategories,
+  getPost,
+  getPosts,
+  getSimilarPosts,
+} from '@services/index'
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { Params } from 'next/dist/server/router'
 import { useRouter } from 'next/router'
@@ -16,9 +21,15 @@ import React from 'react'
 
 interface PostPageProps {
   post: Post
+  relatedPosts: Post[]
+  categories: Category[]
 }
 
-const PostPage: NextPage<PostPageProps> = ({ post }) => {
+const PostPage: NextPage<PostPageProps> = ({
+  post,
+  relatedPosts,
+  categories,
+}) => {
   const router = useRouter()
   if (router.isFallback) {
     return <Loader />
@@ -34,8 +45,8 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
-            <PostWidget slug={post.slug} categories={post.categories} />
-            <Categories />
+            <PostWidget post={post} posts={relatedPosts} />
+            <Categories categories={categories} />
           </div>
         </div>
       </div>
@@ -45,9 +56,16 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
 
 export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
   const post: Post = await getPost(params.slug)
+  const relatedPosts: Post[] = await getSimilarPosts(
+    post?.categories,
+    post?.slug
+  )
+  const categories: Category[] = await getCategories()
   return {
     props: {
       post,
+      relatedPosts,
+      categories,
     },
   }
 }
