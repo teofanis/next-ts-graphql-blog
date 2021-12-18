@@ -1,34 +1,28 @@
 import { Date } from '@components/index'
-import { Category, Post } from '@interfaces/app.interfaces'
-import { getRecentPosts, getSimilarPosts } from '@services/index'
+import { Post } from '@interfaces/app.interfaces'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import useSWR from 'swr'
 
 interface PostWidgetProps {
-  categories?: Category[]
-  slug?: string
+  post?: Post
+  posts: Post[]
 }
 
-const PostWidget = ({ categories, slug }: PostWidgetProps) => {
-  const [relatedPosts, setRelatedPosts] = useState<Post[]>([])
-
-  useEffect(() => {
-    if (slug) {
-      getSimilarPosts(categories, slug).then((result) =>
-        setRelatedPosts(result)
-      )
-    } else {
-      getRecentPosts().then((result) => setRelatedPosts(result))
+const PostWidget = ({ post, posts }: PostWidgetProps) => {
+  const { data } = useSWR<PostWidgetProps>(
+    ['api/recent-posts', JSON.stringify({ post: post })],
+    {
+      fallbackData: { posts: posts },
     }
-  }, [categories, slug])
-
+  )
   return (
     <div className="bg-white dark:bg-gray-500 shadow-lg rounded-lg p-8 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">
-        {slug ? 'Related Posts' : 'Recent Posts'}
+        {post ? 'Related Posts' : 'Recent Posts'}
       </h3>
-      {relatedPosts.map((post) => (
+      {data?.posts?.map((post) => (
         <div className="flex items-center w-full mb-4" key={post.slug}>
           <div className="w-16 flex-none">
             <Image

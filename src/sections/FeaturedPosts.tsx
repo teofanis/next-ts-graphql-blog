@@ -1,10 +1,10 @@
 import { FeaturedPostCard } from '@components/index'
 import Arrows from '@icons/Arrows'
 import { Post } from '@interfaces/app.interfaces'
-import { getFeaturedPosts } from '@services/index'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import useSWR from 'swr'
 
 const responsive = {
   superLargeDesktop: {
@@ -25,9 +25,16 @@ const responsive = {
   },
 }
 
-export const FeaturedPosts = () => {
-  const [featuredPosts, setFeaturedPosts] = useState<Post[]>([])
-  const [dataLoaded, setDataLoaded] = useState(false)
+interface FeaturedPostProps {
+  posts: Post[]
+}
+
+export const FeaturedPosts: React.FC<FeaturedPostProps> = ({ posts }) => {
+  const { data } = useSWR<FeaturedPostProps>(
+    ['api/featured-posts', 'featuredPosts'],
+    { fallbackData: { posts: posts } }
+  )
+
   const rightArrow = (
     <div
       className="absolute arrow-btn text-center py-3 cursor-pointer dark:bg-yellow-600 bg-pink-600 rounded-full"
@@ -44,12 +51,6 @@ export const FeaturedPosts = () => {
       <Arrows direction="left" />
     </div>
   )
-  useEffect(() => {
-    getFeaturedPosts().then((result) => {
-      setFeaturedPosts(result)
-      setDataLoaded(true)
-    })
-  }, [])
 
   return (
     <div className="mb-8">
@@ -60,8 +61,8 @@ export const FeaturedPosts = () => {
         customLeftArrow={leftArrow}
         itemClass="px-4"
       >
-        {dataLoaded &&
-          featuredPosts.map((post) => (
+        {data?.posts &&
+          data?.posts.map((post) => (
             <FeaturedPostCard key={post.slug} post={post} />
           ))}
       </Carousel>
