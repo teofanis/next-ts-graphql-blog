@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post Detail test should render correctly 1`] = `
+<div>
+  <div
+    class="bg-white dark:bg-gray-500 shadow-lg rounded-lg lg:p-8 pb-12 mb-8"
+  >
+    <div
+      class="relative overflow-hidden shadow-md mb-6"
+    >
+      <span
+        style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+      >
+        <img
+          alt="Next JS - TS GraphQL Blog"
+          class="object-top h-full w-full rounded-t-lg"
+          data-nimg="fill"
+          decoding="async"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+        />
+        <noscript />
+      </span>
+    </div>
+    <div
+      class="px-4 lg:px-0"
+    >
+      <div
+        class="flex items-center mb-8"
+      >
+        <div
+          class="flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8"
+        >
+          <div
+            class="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8"
+          >
+            <span
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+            >
+              <span
+                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                />
+              </span>
+              <img
+                alt="Teofanis"
+                class="align-middle rounded-full"
+                data-nimg="intrinsic"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
+            <p
+              class="inline align-middle dark:text-white text-gray-700 ml-2 text-lg"
+            >
+              Teofanis
+            </p>
+          </div>
+          <div
+            class="font-medium dark:text-white text-gray-700"
+          >
+            <svg
+              class="h-6 w-6 inline mr-2 text-pink-500 dark:text-yellow-500"
+              data-testid="calendar-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <span>
+              Nov 21, 2021
+            </span>
+          </div>
+        </div>
+      </div>
+      <h1
+        class="mb-8 text-3xl font-semibold"
+      >
+        Next JS - TS GraphQL Blog
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam neque, rutrum eget interdum eu, ultrices vel lorem. Donec turpis metus, condimentum rhoncus dolor eu, porttitor condimentum neque. Etiam sodales sollicitudin diam vel posuere. Nullam ac iaculis purus. Maecenas ultricies eleifend eleifend. Nulla consequat enim quis lectus molestie, vel sollicitudin justo pretium. Suspendisse in vulputate risus. Aliquam in imperdiet velit. Donec id lectus quis libero convallis consectetur. Sed sed lacus tincidunt, eleifend turpis ac, consectetur orci.
+      </p>
+      <blockquote>
+        Nam odio urna, porta in mollis vel, semper vitae dui. Vestibulum et nisi lectus. Suspendisse nec tincidunt arcu. Nam scelerisque velit vitae venenatis elementum. Nulla lacinia sem vel arcu efficitur molestie. Ut viverra porta porttitor. Proin dapibus elit sed sodales congue. Curabitur nunc felis, feugiat et placerat vitae, suscipit in lorem. Aliquam luctus, erat et aliquam porttitor, sem mauris volutpat lacus, rutrum elementum libero nulla sit amet elit. Donec nec tellus commodo lorem gravida mattis.
+      </blockquote>
+      <p>
+        Etiam convallis est nec eros efficitur eleifend. Morbi eu dignissim felis. Nam feugiat maximus nulla, interdum gravida ligula semper sit amet. Aenean convallis lobortis semper. Integer sit amet rutrum purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tristique quam mi, quis ultrices nibh tincidunt in. Etiam lacus tellus, convallis vel mi a, condimentum faucibus magna. Mauris tempor, massa vitae consectetur eleifend, lectus nisi finibus justo, at convallis leo mi ornare magna. Praesent maximus congue ultricies. Donec neque felis, aliquet at placerat sed, venenatis varius mi. Nulla quis ultrices dolor, sit amet maximus felis.
+      </p>
+      <p>
+        <b>
+          Duis a ante lobortis, blandit sem quis, consequat ligula. Integer euismod ligula a blandit molestie. Curabitur ipsum felis, volutpat non semper quis, tincidunt nec lacus. Nam libero velit, lobortis quis metus nec, sollicitudin efficitur leo. Nunc ornare tortor nec porttitor semper. Sed iaculis ut sapien non semper. Ut faucibus nisl eu sem posuere, non viverra ex volutpat. Ut tempus dignissim ligula ac venenatis.
+        </b>
+      </p>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean a vulputate sapien. Sed vitae ligula metus. Aliquam sit amet lobortis tortor. Nunc id auctor purus. Curabitur non augue ut dui sollicitudin porta nec non est. Sed nec massa faucibus, commodo felis in, consectetur sapien. Nullam maximus urna ipsum, luctus interdum leo porttitor eu. Nunc vel mattis felis. Aenean pellentesque a eros sed rhoncus.
+      </p>
+    </div>
+  </div>
+</div>
+`;
