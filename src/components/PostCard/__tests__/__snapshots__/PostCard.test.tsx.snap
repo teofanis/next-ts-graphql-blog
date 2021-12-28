@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post Card Test should render properly 1`] = `
+<div>
+  <div
+    class="bg-white dark:bg-gray-500 shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8"
+  >
+    <div
+      class="relative overflow-hidden shadow-md pb-80 mb-6"
+    >
+      <span
+        style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+      >
+        <img
+          alt="Next JS - TS GraphQL Blog"
+          class="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
+          data-nimg="fill"
+          decoding="async"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+        />
+        <noscript />
+      </span>
+    </div>
+    <h1
+      class="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 dark:hover:text-yellow-600 text-3xl font-semibold"
+    >
+      <a
+        href="/post/next-ts-graph-blog"
+      >
+        Next JS - TS GraphQL Blog
+      </a>
+    </h1>
+    <div
+      class="block lg:flex text-center items-center justify-center mb-8 w-full"
+    >
+      <div
+        class="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8"
+      >
+        <div
+          class="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8"
+        >
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt="Teofanis"
+              class="align-middle rounded-full"
+              data-nimg="intrinsic"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+            <noscript />
+          </span>
+          <p
+            class="inline align-middle dark:text-white text-gray-700 ml-2 text-lg"
+          >
+            Teofanis
+          </p>
+        </div>
+      </div>
+      <div
+        class="font-medium dark:text-white text-gray-700"
+      >
+        <svg
+          class="h-6 w-6 inline mr-2 text-pink-500 dark:text-yellow-500"
+          data-testid="calendar-icon"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+        <span>
+          Nov 21, 2021
+        </span>
+      </div>
+    </div>
+    <p
+      class="text-center text-lg dark:text-white text-gray-700 font-normal px-4 lg:px-20 mb-8"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam neque, rutrum eget interdum eu, ultrices vel lorem. Donec turpis metus, condimentum rhoncus dolor eu, porttitor condimentum neque. Etiam sodales sollicitudin diam vel posuere. Nullam ac iaculis purus. Maecenas ultricies eleifend eleifend. Nulla consequat enim quis lectus molestie, vel sollicitudin justo pretium. Suspendisse in vulputate risus. Aliquam in imperdiet velit. Donec id lectus quis libero convallis consectetur. Sed sed lacus tincidunt, eleifend turpis ac, consectetur orci.
+
+    </p>
+    <div
+      class="text-center"
+    >
+      <span
+        class="transition duration-500 transform hover:-translate-y-1 inline-block dark:bg-yellow-600 dark:hover:bg-yellow-500 bg-pink-600 hover:bg-pink-500 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
+        href="/post/next-ts-graph-blog"
+      >
+        Continue Reading...
+      </span>
+    </div>
+  </div>
+</div>
+`;

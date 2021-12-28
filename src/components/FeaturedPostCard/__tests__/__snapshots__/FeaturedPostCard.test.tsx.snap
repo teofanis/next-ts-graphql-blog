@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Feature Post Card Test should render properly 1`] = `
+exports[`Featured Post Card Test should render properly 1`] = `
 <div>
   <div
     class="relative h-72"
