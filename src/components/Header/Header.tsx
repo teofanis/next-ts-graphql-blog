@@ -10,7 +10,10 @@ const Header = () => {
     getCategories().then((categories) => setCategories(categories))
   }, [])
   return (
-    <div className="container mx-auto px-10 mb-8">
+    <div
+      className="container mx-auto px-10 mb-8"
+      data-testid="header-wrapper-container"
+    >
       <div className="border-b w-full inline-block dark:border-gray-600 border-blue-400 py-8">
         <div className="items-center md:float-left flex justify-between">
           <Link href="/" passHref>
