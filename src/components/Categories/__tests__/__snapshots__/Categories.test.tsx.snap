@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories Test should render correctly 1`] = `
+<div>
+  <div
+    class="bg-white dark:bg-gray-500 shadow-lg rounded-lg p-8 mb-8 pb-12"
+  >
+    <h3
+      class="text-xl mb-8 font-semibold border-b pb-4"
+    >
+      Categories
+    </h3>
+    <a
+      class="cursor-pointer block pb-3 mb-3 hover:underline"
+      data-testid="category-link-container"
+      href="/category/react"
+    >
+      React
+    </a>
+    <a
+      class="cursor-pointer block pb-3 mb-3 hover:underline"
+      data-testid="category-link-container"
+      href="/category/redux"
+    >
+      Redux
+    </a>
+    <a
+      class="cursor-pointer block pb-3 mb-3 hover:underline"
+      data-testid="category-link-container"
+      href="/category/react-native"
+    >
+      React Native
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Date Test renders correctly 1`] = `
+<div>
+  <span>
+    Oct 28, 2021
+  </span>
+</div>
+`;

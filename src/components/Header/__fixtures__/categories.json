@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "name": "React",
+      "slug": "react"
+    },
+    {
+      "name": "Redux",
+      "slug": "redux"
+    },
+    {
+      "name": "React Native",
+      "slug": "react-native"
+    }
+  ]
+}

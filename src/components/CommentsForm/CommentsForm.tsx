@@ -107,6 +107,7 @@ const CommentsForm = ({ slug }: CommentsFormProps) => {
           className="p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
           placeholder="Leave a comment"
           name="comment"
+          data-testid="comment-input"
         />
       </div>
       <div className="grid grid-cols-2 gap-4 mb-4">
@@ -117,6 +118,7 @@ const CommentsForm = ({ slug }: CommentsFormProps) => {
           className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
           placeholder="Name"
           name="name"
+          data-testid="name-input"
         />
         <input
           type="email"
@@ -125,6 +127,7 @@ const CommentsForm = ({ slug }: CommentsFormProps) => {
           className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
           placeholder="Email"
           name="email"
+          data-testid="email-input"
         />
       </div>
       <div className="grid grid-cols-1 gap-4 mb-4">
@@ -136,6 +139,7 @@ const CommentsForm = ({ slug }: CommentsFormProps) => {
             name="storeData"
             id="storeData"
             value="true"
+            data-testid="checkbox-input"
           />
           <label
             className="dark:text-white text-gray-500 cursor-pointer text-sm ml-2"
@@ -150,6 +154,7 @@ const CommentsForm = ({ slug }: CommentsFormProps) => {
         <button
           type="button"
           onClick={handleCommentSubmission}
+          data-testid="submit-button"
           className="transition duration-500 ease dark:hover:bg-yellow-600 dark:bg-yellow-500 hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 cursor:pointer"
         >
           Post Comment

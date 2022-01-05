@@ -1,0 +1,9 @@
+{
+  "author": {
+    "name": "Test Author Name",
+    "bio": "Test Author Bio",
+    "photo": {
+      "url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+    }
+  }
+}

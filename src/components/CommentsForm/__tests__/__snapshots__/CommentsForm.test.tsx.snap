@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment Form Test should render properly 1`] = `
+<div>
+  <div
+    class="bg-white dark:bg-gray-500 shadow-lg rounded-lg p-8 pb-12 mb-8"
+  >
+    <h3
+      class="text-xl mb-8 font-semibold border-b pb-4"
+    >
+      Leave a Comment
+    </h3>
+    <div
+      class="grid grid-cols-1 gap-4 mb-4"
+    >
+      <textarea
+        class="p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+        data-testid="comment-input"
+        name="comment"
+        placeholder="Leave a comment"
+      />
+    </div>
+    <div
+      class="grid grid-cols-2 gap-4 mb-4"
+    >
+      <input
+        class="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+        data-testid="name-input"
+        name="name"
+        placeholder="Name"
+        type="text"
+        value=""
+      />
+      <input
+        class="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700"
+        data-testid="email-input"
+        name="email"
+        placeholder="Email"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      class="grid grid-cols-1 gap-4 mb-4"
+    >
+      <div>
+        <input
+          data-testid="checkbox-input"
+          id="storeData"
+          name="storeData"
+          type="checkbox"
+          value="true"
+        />
+        <label
+          class="dark:text-white text-gray-500 cursor-pointer text-sm ml-2"
+          for="storeData"
+        >
+          Save my e-email and name for the next time I comment.
+        </label>
+      </div>
+    </div>
+    <div
+      class="mt-8"
+    >
+      <button
+        class="transition duration-500 ease dark:hover:bg-yellow-600 dark:bg-yellow-500 hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 cursor:pointer"
+        data-testid="submit-button"
+        type="button"
+      >
+        Post Comment
+      </button>
+    </div>
+  </div>
+</div>
+`;

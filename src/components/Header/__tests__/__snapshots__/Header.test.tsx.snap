@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Test should render correctly 1`] = `
+<div
+  class="container mx-auto px-10 mb-8"
+  data-testid="header-wrapper-container"
+>
+  <div
+    class="border-b w-full inline-block dark:border-gray-600 border-blue-400 py-8"
+  >
+    <div
+      class="items-center md:float-left flex justify-between"
+    >
+      <span
+        class="cursor-pointer font-bold text-4xl text-white"
+        href="/"
+      >
+        GraphCMS
+      </span>
+      <div>
+        <button
+          aria-label="Toggle Dark Mode"
+          class="p-3 h-12 w-12"
+          type="button"
+        >
+          <svg
+            class="h-6 w-6 text-white"
+            fill="currentColor"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="hidden md:float-left md:contents"
+    >
+      <span
+        class="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer"
+        href="/category/react"
+      >
+        React
+      </span>
+      <span
+        class="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer"
+        href="/category/redux"
+      >
+        Redux
+      </span>
+      <span
+        class="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer"
+        href="/category/react-native"
+      >
+        React Native
+      </span>
+    </div>
+  </div>
+</div>
+`;

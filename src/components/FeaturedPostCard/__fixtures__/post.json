@@ -1,0 +1,26 @@
+{
+  "post": {
+    "author": {
+      "bio": "Developer",
+      "name": "Teofanis",
+      "id": "ckw9n8yz4pykv0c04obv5xg27",
+      "photo": {
+        "url": "https://media.graphcms.com/UvDOMfN6SceLYIqsEkHH"
+      }
+    },
+    "createdAt": "2021-11-21T19:43:57.467541+00:00",
+    "slug": "next-ts-graph-blog",
+    "title": "Next JS - TS GraphQL Blog",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam neque, rutrum eget interdum eu, ultrices vel lorem. Donec turpis metus, condimentum rhoncus dolor eu, porttitor condimentum neque. Etiam sodales sollicitudin diam vel posuere. Nullam ac iaculis purus. Maecenas ultricies eleifend eleifend. Nulla consequat enim quis lectus molestie, vel sollicitudin justo pretium. Suspendisse in vulputate risus. Aliquam in imperdiet velit. Donec id lectus quis libero convallis consectetur. Sed sed lacus tincidunt, eleifend turpis ac, consectetur orci.\n",
+    "featuredPost": true,
+    "categories": [
+      {
+        "name": "Web Development",
+        "slug": "web-dev"
+      }
+    ],
+    "featuredImage": {
+      "url": "https://media.graphcms.com/u2qqBfuQHOmGyYj5MQDx"
+    }
+  }
+}

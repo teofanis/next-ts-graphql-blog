@@ -16,9 +16,12 @@ const Categories: React.FC<CategoryProps> = ({ categories }) => {
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">Categories</h3>
       {data?.categories?.map((category) => (
         <Link href={`/category/${category.slug}`} key={category.slug} passHref>
-          <span className="cursor-pointer block pb-3 mb-3 hover:underline">
+          <a
+            data-testid="category-link-container"
+            className="cursor-pointer block pb-3 mb-3 hover:underline"
+          >
             {category.name}
-          </span>
+          </a>
         </Link>
       ))}
     </div>
