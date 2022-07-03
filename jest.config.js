@@ -1,7 +1,12 @@
-module.exports = {
+const nextJest = require('next/jest')
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+module.exports = createJestConfig({
   verbose: true,
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['./setupTests.ts'],
+  testEnvironment: 'jest-environment-jsdom',
+  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
   moduleNameMapper: {
     '^@pages(.*)$': '<rootDir>/src/pages$1',
     '^@components(.*)$': '<rootDir>/src/components$1',
@@ -42,4 +47,4 @@ module.exports = {
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
-}
+})
