@@ -21,6 +21,7 @@
 }
 
 .react-multi-carousel-list {
+  min-height: 290px;
   & .arrow-btn {
     transition: width 300ms ease;
     width: 50px;

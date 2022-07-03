@@ -15,10 +15,12 @@ import {
   getSimilarPosts,
 } from '@services/index'
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { Params } from 'next/dist/server/router'
 import { useRouter } from 'next/router'
-import React from 'react'
+import { ParsedUrlQuery } from 'querystring'
 
+interface IParams extends ParsedUrlQuery {
+  slug: string
+}
 interface PostPageProps {
   post: Post
   relatedPosts: Post[]
@@ -54,8 +56,9 @@ const PostPage: NextPage<PostPageProps> = ({
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
-  const post: Post = await getPost(params.slug)
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const { slug } = ctx.params as IParams
+  const post: Post = await getPost(slug)
   const relatedPosts: Post[] = await getSimilarPosts(
     post?.categories,
     post?.slug

@@ -3,9 +3,12 @@ import { Categories, PostCard } from '@components/index'
 import { Category, Post } from '@interfaces/app.interfaces'
 import { getCategories, getCategoryPost } from '@services/index'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { Params } from 'next/dist/server/router'
 import { useRouter } from 'next/router'
-import React from 'react'
+import { ParsedUrlQuery } from 'querystring'
+
+interface IParams extends ParsedUrlQuery {
+  slug: string
+}
 
 interface CategoryPostsProps {
   posts: Post[]
@@ -37,8 +40,9 @@ const CategoryPosts: NextPage<CategoryPostsProps> = ({ posts, categories }) => {
 
 export default CategoryPosts
 
-export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
-  const posts: Post[] = await getCategoryPost(params.slug)
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const { slug } = ctx.params as IParams
+  const posts: Post[] = await getCategoryPost(slug)
   const categories: Category[] = await getCategories()
 
   return {
