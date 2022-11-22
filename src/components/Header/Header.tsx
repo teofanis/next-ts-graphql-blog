@@ -2,7 +2,7 @@ import { ThemeSwitcher } from '@components/index'
 import { Category } from '@interfaces/app.interfaces'
 import { getCategories } from '@services/index'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Header = () => {
   const [categories, setCategories] = useState<Category[]>([])
@@ -18,7 +18,7 @@ const Header = () => {
         <div className="items-center md:float-left flex justify-between">
           <Link href="/" passHref>
             <span className="cursor-pointer font-bold text-4xl text-white">
-              GraphCMS
+              GraphCMS+1
             </span>
           </Link>
           <div>
